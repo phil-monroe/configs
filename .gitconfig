@@ -1,0 +1,27 @@
+[user]
+	name = Phil Monroe
+	email = phil@philmonroe.com
+
+[alias]
+	b = branch
+	s = status
+	cm = commit -am
+	c = checkout
+	
+[color]
+	ui = true
+	
+[core]
+	editor = mate -w
+	
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git $LOCAL $REMOTE
+	
+[difftool]
+	prompt = false
+	
+[diff]
+	tool = Kaleidoscope
+	
+[heroku]
+	account = rbsavvy
