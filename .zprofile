@@ -24,3 +24,6 @@ fi
 # Colorize ls
 export CLICOLOR=1;
 export LSCOLORS=Cxfxcxdxbxegedabagacad;
+
+# Fix Delete!!!
+bindkey "^[[3~" delete-char
