@@ -8,8 +8,9 @@ PROMPT=$'%{\e[1;32m%}%c%# %{\e[1;00m%}'
 # Git Compleation
 source ~/.zsh/git_rprompt.bash
 
-# Amazon S3 Credentials
-source ~/.s3_credentials
+# credentials
+source ~/.credentials/s3_credentials
+source ~/.credentials/identified-crankshaft
 
 # Remember my directory on new tab!
 precmd () {print -Pn "\e]2; %~/ \a"}
