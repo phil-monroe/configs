@@ -7,6 +7,7 @@
 	s = status
 	cm = commit -am
 	c = checkout
+	prom = pull --rebase origin master
 	
 [color]
 	ui = true

@@ -25,3 +25,7 @@ PdaNetUninstall.sh
 .ssh/
 .fontconfig/
 .rvm/
+hosts-powder.bak
+.viminfo
+.rbenv/
+.pow

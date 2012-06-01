@@ -1,3 +1,5 @@
+# echo 'git prompt loaded'
+
 function findup(){
 arg="$1"
 if test -z "$arg"; then exit 1; fi
@@ -14,7 +16,7 @@ echo $PWD/$arg
 
 # This zsh function is called whenever changing directories and
 # shows the current git branch in the prompt
-function precmd()
+function git_prompt()
 {
     # Adjust this to your current preferred prompt
     local _git _branch
