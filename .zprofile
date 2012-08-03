@@ -31,7 +31,7 @@ source $HOME/.zsh/git_rprompt.bash
 
 # credentials
 source ~/.credentials/s3_credentials
-source ~/.credentials/identified-crankshaft
+source ~/.credentials/identified
 
 # History
 HISTSIZE=50

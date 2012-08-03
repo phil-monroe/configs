@@ -1,0 +1,6 @@
+softWrap = true  
+tabSize = 2
+softTabs = true
+spellChecking = true
+spellingLanguage = en
+windowTitle    = "$TM_DISPLAYNAME - $TM_FILEPATH"

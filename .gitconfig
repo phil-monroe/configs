@@ -8,6 +8,10 @@
 	cm = commit -am
 	c = checkout
 	prom = pull --rebase origin master
+	f = fetch --all --tags
+  
+[push]
+  default = current
 	
 [color]
 	ui = true
@@ -26,3 +30,6 @@
 	
 [heroku]
 	account = rbsavvy
+
+[instaweb]
+  httpd = webrick
