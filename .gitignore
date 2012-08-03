@@ -29,3 +29,7 @@ hosts-powder.bak
 .viminfo
 .rbenv/
 .pow
+.bundle/
+.android/
+.cheat/
+.gem/
