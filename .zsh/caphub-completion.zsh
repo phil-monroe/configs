@@ -6,9 +6,9 @@ caphub() {
   unsetopt pushdsilent
 }
 
-_my_cpl() {
+_caphub_cpl() {
   [ -n "${CAP_AUTOCOMPLETE_LIST+x}" ] || CAP_AUTOCOMPLETE_LIST=`caphub autocomplete`
   reply=(${=CAP_AUTOCOMPLETE_LIST})
 }
 
-compctl -K _my_cpl caphub
+compctl -K _caphub_cpl caphub
