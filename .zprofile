@@ -2,7 +2,17 @@
 
 # Aliases
 alias ll='ls -lah'
+
 alias rake='noglob rake'
+alias heroku='/usr/bin/heroku'
+
+alias spark_plug="pushd ~/Development/spark_plug"
+alias piston="pushd ~/Development/piston"
+alias crankshaft="pushd ~/Development/crankshaft"
+source $HOME/.zsh/caphub-completion.zsh
+
+alias vm_up="spark_plug; vagrant up; popd"
+alias vm_halt="spark_plug; vagrant halt; popd"
 
 # Prompt
 PROMPT=$'%{\e[1;32m%}%c%# %{\e[1;00m%}'

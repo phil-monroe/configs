@@ -5,7 +5,8 @@ capistrano_color_matchers = [
   { :match => /Compressing objects/,    :color => :hide,      :prio => 10 },
   { :match => /Receiving objects/,      :color => :hide,      :prio => 10 },
   { :match => /failed/,                 :color => :red,       :prio => 100},
-  { :match => /command finished in/,    :color => :green,     :prio => 100}
+  { :match => /command finished in/,    :color => :green,     :prio => 100},
+  { :match => /\+/,                     :color => :yellow,    :prio => 100}
 ]
 
 colorize( capistrano_color_matchers )
