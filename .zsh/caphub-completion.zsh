@@ -1,9 +1,13 @@
 caphub() {
-  setopt pushdsilent
-  pushd ~/Development/caphub
-  cap $*
-  popd
-  unsetopt pushdsilent
+  if [ $# -eq 0 ]; then
+    pushd ~/Development/caphub
+  else
+    setopt pushdsilent
+    pushd ~/Development/caphub
+    cap $*
+    popd
+    unsetopt pushdsilent
+  fi
 }
 
 _caphub_cpl() {
