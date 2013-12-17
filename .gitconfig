@@ -9,27 +9,35 @@
 	c = checkout
 	prom = pull --rebase origin master
 	f = fetch --all --tags
-  
+
 [push]
   default = current
-	
+
 [color]
 	ui = true
-	
+
 [core]
 	editor = mate -w
-	
-[difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git $LOCAL $REMOTE
-	
-[difftool]
-	prompt = false
-	
-[diff]
-	tool = Kaleidoscope
-	
+	quotepath = false
+
 [heroku]
 	account = rbsavvy
 
 [instaweb]
   httpd = webrick
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"

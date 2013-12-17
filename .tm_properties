@@ -1,6 +1,8 @@
-softWrap = true  
+softWrap = true
 tabSize = 2
 softTabs = true
 spellChecking = true
 spellingLanguage = en
 windowTitle    = "$TM_DISPLAYNAME - $TM_FILEPATH"
+
+exclude = "{*.log,tmp/*,coverage/*,*.jar,*.class,*.o,*.war}"

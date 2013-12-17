@@ -1,0 +1,35 @@
+# This is the default .slate file.
+# If no ~/.slate file exists this is the file that will be used.
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Quarters
+bind 1:alt chain corner top-left resize:screenSizeX/2;screenSizeY/2 | corner top-right resize:screenSizeX/2;screenSizeY/2 | corner bottom-right resize:screenSizeX/2;screenSizeY/2 | corner bottom-left resize:screenSizeX/2;screenSizeY/2
+
+# Halfs
+bind 2:alt chain corner top-right resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX;screenSizeY/2 | corner bottom-left resize:screenSizeX;screenSizeY/2
+
+# Centered
+bind 3:alt corner top-left resize:screenSizeX;screenSizeY/2 | corner top-right resize:screenSizeX/2;screenSizeY | corner bottom-left resize:screenSizeX;screenSizeY/2 | corner top-left resize:screenSizeX/2;screenSizeY
+
+# Full screen
+bind f:alt corner top-left resize:screenSizeX;screenSizeY
+
+# Throw Bindings
+bind 1:ctrl;alt         throw 0 resize
+bind 2:ctrl;alt         throw 1 resize
+bind right:ctrl;alt;cmd throw right resize
+bind left:ctrl;alt;cmd  throw left  resize
+
+
+# # Window Hints
+# bind esc:cmd hint
+
+layout identified 'Asana' corner top-left resize:screenSizeX/2;screenSizeY/2
+layout identified 'Postbox' corner top-right resize:screenSizeX/2;screenSizeY/2
+layout identified 'Calendar' corner bottom-right resize:screenSizeX/2;screenSizeY/2
+layout identified 'Pivotal Tracker' corner bottom-left resize:screenSizeX/2;screenSizeY/2
+
+bind padEnter:ctrl layout identified
