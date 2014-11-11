@@ -18,8 +18,12 @@ PATH="$HOME/bin"
 # Ruby
 PATH="$PATH:$HOME/.rbenv/bin"
 
+# id-data
+PATH="$PATH:$HOME/Development/identified/id_data/bin"
+
 # PostgreSQL
-PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin"
+# PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin"
+export PGDATA="./.postgres"
 
 # Hadoop
 export HADOOP_CONF_DIR="$HOME/Development/identified/hadoop/etc/hadoop-identified"
@@ -46,4 +50,6 @@ eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 
 # Ruby SSL Fix
-export SSL_CERT_FILE=/usr/local/Cellar/curl-ca-bundle/1.87/share/ca-bundle.crt
+# export SSL_CERT_FILE=/usr/local/Cellar/curl-ca-bundle/1.87/share/ca-bundle.crt
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+export MAKE_OPTS=-j8

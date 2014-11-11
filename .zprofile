@@ -11,7 +11,6 @@ alias sk='bundle exec sidekiq'
 alias spec='time bundle exec rspec -c'
 alias reload='. ~/.zprofile ; . ~/.zshrc'
 
-
 ## Zeus
 alias zc='zeus c'
 alias zs='zeus s'
@@ -53,6 +52,16 @@ rtop(){
 
 rsniff(){
 	echo "wireshark -k -i <(ssh  $1 'sudo tcpdump -i eth0  -w - $2')"
+}
+
+avro-tools(){
+  java -jar ~/jars/avro-tools*.jar "$@"
+}
+
+scalding() {
+  module=$1
+  shift
+  yarn jar $module/target/*-job.jar com.twitter.scalding.Tool "$@"
 }
 
 
@@ -119,7 +128,7 @@ preexec(){
   dir_mem_preexec
 }
 
-export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000

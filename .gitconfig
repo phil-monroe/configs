@@ -3,12 +3,17 @@
 	email = phil@philmonroe.com
 
 [alias]
+  a = add --all
 	b = branch
 	s = status
 	cm = commit -am
 	c = checkout
 	prom = pull --rebase origin master
 	f = fetch --all --tags
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  deploy = push heroku master
+  deploy-stg = push staging master
+  deploy-prd = push production master
 
 [push]
   default = current
@@ -25,19 +30,3 @@
 
 [instaweb]
   httpd = webrick
-
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
-[merge]
-	tool = Kaleidoscope
-[difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"

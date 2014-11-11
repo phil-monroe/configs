@@ -22,14 +22,26 @@ bind 1:ctrl;alt         throw 0 resize
 bind 2:ctrl;alt         throw 1 resize
 bind right:ctrl;alt;cmd throw right resize
 bind left:ctrl;alt;cmd  throw left  resize
-
+bind up:ctrl;alt;cmd throw up resize
+bind down:ctrl;alt;cmd  throw down  resize
 
 # # Window Hints
 # bind esc:cmd hint
 
-layout identified 'Asana' corner top-left resize:screenSizeX/2;screenSizeY/2
-layout identified 'Postbox' corner top-right resize:screenSizeX/2;screenSizeY/2
-layout identified 'Calendar' corner bottom-right resize:screenSizeX/2;screenSizeY/2
-layout identified 'Pivotal Tracker' corner bottom-left resize:screenSizeX/2;screenSizeY/2
+# Nudge
+bind left:ctrl,shift  nudge -100  +0
+bind right:ctrl,shift nudge +100  +0
+bind up:ctrl,shift    nudge +0    -100
+bind down:ctrl,shift  nudge +0    +100
 
-bind padEnter:ctrl layout identified
+bind up:ctrl,alt    sequence resize +10%    +10% |  nudge -5% -5%
+bind down:ctrl,alt  sequence resize -10%    -10% |  nudge +5% +5%
+
+
+# Layouts
+# layout identified 'TextMate' corner top-left resize:screenSizeX/2;screenSizeY/2
+# layout identified 'Postbox' corner top-right resize:screenSizeX/2;screenSizeY/2
+# layout identified 'Calendar' corner bottom-right resize:screenSizeX/2;screenSizeY/2
+# layout identified 'Pivotal Tracker' corner bottom-left resize:screenSizeX/2;screenSizeY/2
+#
+# bind 1:ctrl;alt;cmd layout identified

@@ -18,15 +18,16 @@ function findup(){
 function git_prompt()
 {
   # Adjust this to your current preferred prompt
-  local _git _branch
+  local _git _branch _sha
 
   # This call requires the "findup" script from http://www.davidfaure.fr/scripts
   _git=`findup .git`
 
-  if test -n "$_git"; 
+  if test -n "$_git";
     then
     _branch=`sed -e 's/ref: refs\/heads\///' $_git/HEAD`
-    RPROMPT="[$_branch]"
+    _sha=`git log --pretty=format:'%h' -n 1`
+    RPROMPT="[$_branch|$_sha]"
   else
     RPROMPT=""
   fi
