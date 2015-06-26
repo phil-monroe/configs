@@ -1,6 +1,3 @@
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
-
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
@@ -11,11 +8,8 @@ bind 1:alt chain corner top-left resize:screenSizeX/2;screenSizeY/2 | corner top
 # Halfs
 bind 2:alt chain corner top-right resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX;screenSizeY/2 | corner bottom-left resize:screenSizeX;screenSizeY/2
 
-# Centered
-bind 3:alt corner top-left resize:screenSizeX;screenSizeY/2 | corner top-right resize:screenSizeX/2;screenSizeY | corner bottom-left resize:screenSizeX;screenSizeY/2 | corner top-left resize:screenSizeX/2;screenSizeY
-
-# Full screen
-bind f:alt corner top-left resize:screenSizeX;screenSizeY
+# Full screen + Centered
+bind f:alt chain corner top-left resize:screenSizeX;screenSizeY | move screenOriginX+(screenSizeX/2-(screenSizeX*0.4));screenOriginY+(screenSizeY/2-(screenSizeY*0.4))  screenSizeX*0.8;screenSizeY*0.8
 
 # Throw Bindings
 bind 1:ctrl;alt         throw 0 resize
@@ -26,22 +20,8 @@ bind up:ctrl;alt;cmd throw up resize
 bind down:ctrl;alt;cmd  throw down  resize
 
 # # Window Hints
-# bind esc:cmd hint
+bind esc:cmd hint
 
 # Nudge
-bind left:ctrl,shift  nudge -100  +0
-bind right:ctrl,shift nudge +100  +0
-bind up:ctrl,shift    nudge +0    -100
-bind down:ctrl,shift  nudge +0    +100
-
 bind up:ctrl,alt    sequence resize +10%    +10% |  nudge -5% -5%
 bind down:ctrl,alt  sequence resize -10%    -10% |  nudge +5% +5%
-
-
-# Layouts
-# layout identified 'TextMate' corner top-left resize:screenSizeX/2;screenSizeY/2
-# layout identified 'Postbox' corner top-right resize:screenSizeX/2;screenSizeY/2
-# layout identified 'Calendar' corner bottom-right resize:screenSizeX/2;screenSizeY/2
-# layout identified 'Pivotal Tracker' corner bottom-left resize:screenSizeX/2;screenSizeY/2
-#
-# bind 1:ctrl;alt;cmd layout identified
