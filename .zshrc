@@ -6,11 +6,8 @@ compinit
 autoload -U select-word-style
 select-word-style bash
 
-# Setup Amazon EC2 Command-Line Tools
-export EC2_HOME="$HOME/.ec2"
-export EC2_PRIVATE_KEY=`ls $EC2_HOME/pk.pem`
-export EC2_CERT=`ls $EC2_HOME/cert.pem`
-export JAVA_HOME=`/usr/libexec/java_home`
+# Setup Amazon EC2 Command-Line Tools`
+# export JAVA_HOME=`/usr/libexec/java_home`
 
 # My bins
 PATH="$HOME/bin"
@@ -18,19 +15,10 @@ PATH="$HOME/bin"
 # Ruby
 PATH="$PATH:$HOME/.rbenv/bin"
 
-# id-data
-PATH="$PATH:$HOME/Development/identified/id_data/bin"
-
 # PostgreSQL
 # PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin"
 export PGDATA="./.postgres"
 
-# Hadoop
-export HADOOP_CONF_DIR="$HOME/Development/identified/hadoop/etc/hadoop-identified"
-PATH="$PATH:/usr/local/hadoop/bin"
-
-# EC2
-PATH="$PATH:$EC2_HOME/bin"
 
 # Standard stuff
 PATH="$PATH:/usr/local/bin"
@@ -50,6 +38,5 @@ eval "$(rbenv init -)"
 export PATH="./bin:$PATH"
 
 # Ruby SSL Fix
-# export SSL_CERT_FILE=/usr/local/Cellar/curl-ca-bundle/1.87/share/ca-bundle.crt
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export MAKE_OPTS=-j8

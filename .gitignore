@@ -33,3 +33,5 @@ hosts-powder.bak
 .android/
 .cheat/
 .gem/
+.lpass/
+.histfile
