@@ -35,3 +35,4 @@ hosts-powder.bak
 .gem/
 .lpass/
 .histfile
+.heroku/
