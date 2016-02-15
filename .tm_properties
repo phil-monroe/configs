@@ -5,7 +5,7 @@ spellChecking = true
 spellingLanguage = en
 windowTitle    = "$TM_DISPLAYNAME - $TM_FILEPATH"
 
-exclude = "{*.log,target/*,coverage/*,*.jar,*.class,*.o,*.war}"
+exclude = "{*.log,target/*,coverage/*,*.jar,*.class,*.o,*.war,tmp/*}"
 
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
 PATH = "$HOME/.rbenv/bin:$PATH"
