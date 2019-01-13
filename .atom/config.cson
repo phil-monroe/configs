@@ -1,0 +1,97 @@
+"*":
+  "api-blueprint-preview": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "44ea393e-0c6c-499c-8a66-832210d703a7"
+    php:
+      beautify_on_save: true
+    ruby: {}
+  "atom-spotify2":
+    displayOnLeftSide: false
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "data-atom"
+      "api-blueprint-preview"
+      "linter-api-blueprint"
+    ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      "node_modules"
+      ".bundle"
+      "vendor"
+      "tmp"
+      "*.log"
+      ".sass-cache"
+    ]
+    packagesWithKeymapsDisabled: [
+      "linter-api-blueprint"
+    ]
+    projectHome: "/Users/phil/Development"
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Inconsolata"
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrapAtPreferredLineLength: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "17b259d8-447a-c0cf-48a4-98f138575457"
+  "goto-definition":
+    performanceMode: true
+  "language-dotenv":
+    dotenvFileNames: [
+      ".env"
+      ".env.local"
+      ".env.test"
+    ]
+  linter:
+    disabledProviders: [
+      "Ruby"
+    ]
+  "linter-eslint":
+    fixOnSave: true
+  "linter-rubocop":
+    disableWhenNoConfigFile: true
+  "linter-ruby":
+    ignoredExtensions: [
+      "erb"
+      "md"
+      "slim"
+    ]
+  "linter-ui-default":
+    panelHeight: 171
+  "markdown-preview":
+    useGitHubStyle: true
+  "platformio-ide-terminal":
+    style:
+      theme: "pro"
+    toggles:
+      autoClose: true
+      selectToCopy: false
+  "process-palette": {}
+  rspec:
+    command: "./bin/rspec -f doc"
+  "rubocop-auto-correct":
+    correctFile: true
+  "status-bar": {}
+  "tree-view": {}
+  "unity-ui": {}
+  welcome:
+    showOnStartup: false
+".js.source":
+  editor:
+    autoIndent: true

@@ -11,7 +11,10 @@ alias sk='bundle exec sidekiq'
 alias spec='time bundle exec rspec -c'
 alias reload='. ~/.zprofile ; . ~/.zshrc'
 
+alias gh='github'
 
+alias opmaven='eval $(op signin mavenlabs)'
+alias oppersonal='eval $(op signin themonroes)'
 
 name_tab() {
   echo -ne "\e]1;$1\a"
@@ -23,6 +26,14 @@ rtop(){
 
 rsniff(){
 	echo "wireshark -k -i <(ssh  $1 'sudo tcpdump -i eth0  -w - $2')"
+}
+
+csv() {
+  sed 's/,,/, ,/g;s/,,/, ,/g' $1 | column -s, -t | less -#2 -N -S
+}
+
+schema() {
+  psql $1 -c "\d $2"
 }
 
 
@@ -81,4 +92,8 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=100000000
 export RUBY_HEAP_FREE_MIN=500000
 
-export EDITOR=mate
+export EDITOR=atom
+
+export NODE_PATH=/usr/local/lib/node_modules
+
+HEROKU_AC_ZSH_SETUP_PATH=/Users/phil/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;

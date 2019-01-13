@@ -1,0 +1,15 @@
+'.platform-darwin':
+  'shift-cmd-R': 'unset!'
+  
+'atom-workspace':
+  'cmd-shift-w':        'tabs:close-all-tabs'
+  'cmd-i':              'editor:auto-indent'
+  'ctrl-cmd-alt-[':     'linter-rubocop:fix-file'
+  'cmd-l':              'go-to-line:toggle'
+
+'.platform-darwin atom-text-editor':
+  'cmd-l':              'go-to-line:toggle'
+  'cmd-r':              'rails-rspec:toggle-spec-file'
+  'shift-cmd-R':        'rspec:run'
+  'cmd-ctrl-alt-r':     'rspec:run-all'
+  'cmd-shift-t':        'symbols-view:toggle-file-symbols'

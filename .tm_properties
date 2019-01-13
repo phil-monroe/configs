@@ -5,8 +5,10 @@ spellChecking = true
 spellingLanguage = en
 windowTitle    = "$TM_DISPLAYNAME - $TM_FILEPATH"
 
-exclude = "{*.log,target/*,coverage/*,*.jar,*.class,*.o,*.war,tmp/*}"
+exclude = "{*.log,target/*,coverage/*,*.jar,*.class,*.o,*.war,tmp/*,node_modules/*,public/assets/*,public/packs/*}"
 
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
 PATH = "$HOME/.rbenv/bin:$PATH"
 SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+TM_COFFEE=/usr/local/lib/node_modules/coffee-script/bin/coffee
