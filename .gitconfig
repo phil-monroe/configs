@@ -1,6 +1,6 @@
 [user]
 	name = Phil Monroe
-	email = phil@philmonroe.com
+	email = phil@maven-labs.com
 
 [alias]
   a = add --all
@@ -10,9 +10,13 @@
 	cm = commit -am
 	c = checkout
 	prom = pull --rebase origin master
+  pri = pull --rebase=interactive
 	f = fetch --all --tags
   lg = log --all --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lgm = log --graph --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative origin/master..HEAD
+  lgpr = log --graph --oneline --pretty=format:'%s' --abbrev-commit --date=relative origin/master..HEAD
   lgs = log --all --graph --oneline --simplify-by-decoration --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  loma = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative origin/master..HEAD
   deploy = push heroku master
   deploy-stg = push staging master
   deploy-prd = push production master
@@ -20,15 +24,20 @@
   undo = reset --soft HEAD^
   stash-all = stash save --include-untracked
 
+
 [push]
   default = current
   followTags = true
+
+[pull]
+  rebase = true
+  ff = only
 
 [color]
 	ui = true
 
 [core]
-	editor = mate -w
+	editor = atom -w
 	quotepath = false
 
 [heroku]
