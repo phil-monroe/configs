@@ -1,65 +1,32 @@
 # echo 'zshrc loaded'
 
-autoload -U compinit
-compinit
-
-autoload -U select-word-style
-select-word-style bash
-
-# Setup Amazon AWS CLI`
-# export JAVA_HOME=`/usr/libexec/java_home`
-source /usr/local/share/zsh/site-functions/_aws
-
-# My bins
-PATH="$HOME/bin"
+export LANG="en_US.UTF-8"
+export EDITOR=atom
+export MAKE_OPTS=-j8
 
 # Ruby
-PATH="$PATH:$HOME/.rbenv/bin"
+source $HOME/.zsh/ruby_tuning.zsh
+
+# Node
+export NODE_PATH=/usr/local/lib/node_modules
 
 # GO
 export GOPATH="$HOME/Development/golang"
-PATH="$PATH:$GOPATH/bin"
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # PostgreSQL
-# PATH="$PATH:/Applications/Postgres.app/Contents/MacOS/bin"
 export PGDATA="./.postgres"
 
 # Android
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 
-# curl via homebrew
-PATH="$PATH:/usr/local/opt/curl/bin"
+# Amazon AWS CLI
+source /usr/local/share/zsh/site-functions/_aws
 
-# Standard stuff
-PATH="$PATH:/usr/local/bin"
-PATH="$PATH:/usr/local/sbin"
+# ASDF
+source $(brew --prefix asdf)/asdf.sh
 
-PATH="$PATH:/usr/bin"
-PATH="$PATH:/usr/sbin"
-PATH="$PATH:/bin"
-PATH="$PATH:/sbin"
-
-PATH="${PATH}:${ANDROID_HOME}/tools"
-PATH="${PATH}:${ANDROID_HOME}/platform-tools"
-
-export PATH
-
-
-# RBENV
-eval "$(rbenv init -)"
-
-# Project Bins
-export PATH="./bin:$PATH"
-
-# Ruby SSL Fix
-# export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
-export MAKE_OPTS=-j8
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-export BUNDLE_PATH=./.bundle
+source $HOME/.zsh/path.zsh
+source $HOME/.zsh/history.zsh

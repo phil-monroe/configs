@@ -15,7 +15,7 @@ function findup(){
 
 # This zsh function is called whenever changing directories and
 # shows the current git branch in the prompt
-function git_prompt()
+function git_rprompt()
 {
   # Adjust this to your current preferred prompt
   local _git _branch _sha
@@ -31,4 +31,9 @@ function git_prompt()
   else
     RPROMPT=""
   fi
+}
+
+configure_prompt() {
+  PROMPT=$'%{\e[1;32m%}%c%# %{\e[1;00m%}'
+  git_rprompt
 }
