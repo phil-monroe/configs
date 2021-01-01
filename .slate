@@ -8,16 +8,26 @@ bind 1:alt chain corner top-left resize:screenSizeX/2;screenSizeY/2 | corner top
 # Halfs
 bind 2:alt chain corner top-right resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX;screenSizeY/2 | corner bottom-left resize:screenSizeX;screenSizeY/2
 
+# thirds
+#bind 3:alt chain move screenOriginX;screenOriginY screenSizeX;screenSizeY/3 | move screenOriginX;screenOriginY+screenSizeY/3 screenSizeX;screenSizeY/3 | move screenOriginX;screenOriginY+2*screenSizeY/3 screenSizeX;screenSizeY/3
+bind 3:alt chain move screenOriginX;screenOriginY screenSizeX/3;screenSizeY | move screenOriginX+1*screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY | move screenOriginX+2*screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
 # Full screen + Centered
 bind f:alt chain corner top-left resize:screenSizeX;screenSizeY | move screenOriginX+(screenSizeX/2-(screenSizeX*0.4));screenOriginY+(screenSizeY/2-(screenSizeY*0.4))  screenSizeX*0.8;screenSizeY*0.8
 
 # Throw Bindings
-bind 1:ctrl;alt         throw 0 resize
-bind 2:ctrl;alt         throw 1 resize
-bind right:ctrl;alt;cmd throw right resize
-bind left:ctrl;alt;cmd  throw left  resize
-bind up:ctrl;alt;cmd throw up resize
-bind down:ctrl;alt;cmd  throw down  resize
+# bind 1:ctrl;alt         throw 0 resize
+# bind 2:ctrl;alt         throw 1 resize
+# bind 3:ctrl;alt         throw 2 resize
+# bind right:ctrl;alt;cmd throw right resize
+# bind left:ctrl;alt;cmd  throw left  resize
+# bind up:ctrl;alt;cmd throw up resize
+# bind down:ctrl;alt;cmd  throw down  resize
+
+bind left:ctrl;alt;cmd  throw 0  resize
+bind down:ctrl;alt;cmd  throw 1  resize
+bind right:ctrl;alt;cmd throw 2 resize
+bind up:ctrl;alt;cmd    throw next resize
+
 
 # # Window Hints
 bind esc:cmd hint
