@@ -1,4 +1,11 @@
-Pry.config.editor = "mate"
+Pry.config.editor = "nano"
+
+if Pry.config.respond_to? :history_file=
+  Pry.config.history_file = ".pry_history"
+else
+  Pry.config.history.file = ".pry_history"
+end
+
 
 def histogram ary
   h = Hash.new
@@ -10,10 +17,19 @@ end
 
 
 def phistogram ary
-  puts "key => count"
+  total = ary.count
+  puts "Total count: #{total}"
 
-  histogram(ary).each do |k, v|
-    puts [k, " => ", v].join
+  rows = histogram(ary).map do |k, v|
+    percentage = ((v.to_f / total) * 100.0)
+    { label: k, data: "(#{v} / #{percentage.round(1)}%)", bar: ('=' * percentage.round) }
+  end
+
+  biggest_label = rows.map{ |r| r[:label] }.max_by(&:size).size + 2
+  biggest_data  = rows.map{ |r| r[:data] }.max_by(&:size).size + 2
+
+  rows.each do |label:, data:, bar:|
+    puts(format("%-#{biggest_label}s  %#{biggest_data}s | %s", label, data, bar))
   end
 
   nil
