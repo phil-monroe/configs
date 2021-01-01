@@ -6,14 +6,20 @@
     php:
       beautify_on_save: true
     ruby: {}
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+    buildTimeout: 60000
+    cmdArgs: "--exclude=.bundle"
   "atom-spotify2":
     displayOnLeftSide: false
   core:
+    allowPendingPaneItems: false
     automaticallyUpdate: false
     disabledPackages: [
       "data-atom"
       "api-blueprint-preview"
       "linter-api-blueprint"
+      "symbols-view"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -42,6 +48,7 @@
     ]
   editor:
     fontFamily: "Inconsolata"
+    fontSize: 20
     invisibles: {}
     preferredLineLength: 120
     scrollPastEnd: true
@@ -50,6 +57,10 @@
     tabType: "soft"
   "exception-reporting":
     userId: "17b259d8-447a-c0cf-48a4-98f138575457"
+  "fuzzy-finder":
+    prefillFromSelection: true
+  "git-blame":
+    columnWidth: 398
   "goto-definition":
     performanceMode: true
   "language-dotenv":
@@ -63,7 +74,9 @@
       "Ruby"
     ]
   "linter-eslint":
-    fixOnSave: true
+    autofix:
+      fixOnSave: true
+    disabling: {}
   "linter-rubocop":
     disableWhenNoConfigFile: true
   "linter-ruby":
@@ -73,7 +86,7 @@
       "slim"
     ]
   "linter-ui-default":
-    panelHeight: 171
+    panelHeight: 392
   "markdown-preview":
     useGitHubStyle: true
   "platformio-ide-terminal":
@@ -87,7 +100,26 @@
     command: "./bin/rspec -f doc"
   "rubocop-auto-correct":
     correctFile: true
+    rubocopCommandPath: "./bin/rubocop"
   "status-bar": {}
+  "todo-show":
+    findTheseTodos: [
+      "WIP"
+      "\\@phil"
+      "MARK"
+    ]
+    ignoreThesePaths: [
+      "node_modules"
+      "vendor"
+      "bower_components"
+      "*.pdf"
+      "public/packs"
+    ]
+    showInTable: [
+      "Text"
+      "Type"
+      "File"
+    ]
   "tree-view": {}
   "unity-ui": {}
   welcome:

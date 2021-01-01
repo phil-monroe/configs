@@ -1,6 +1,6 @@
 '.platform-darwin':
   'shift-cmd-R': 'unset!'
-  
+
 'atom-workspace':
   'cmd-shift-w':        'tabs:close-all-tabs'
   'cmd-i':              'editor:auto-indent'
@@ -13,3 +13,4 @@
   'shift-cmd-R':        'rspec:run'
   'cmd-ctrl-alt-r':     'rspec:run-all'
   'cmd-shift-t':        'symbols-view:toggle-file-symbols'
+  'shift-cmd-alt-l':         'git-links:copy-absolute-link-for-current-line'
