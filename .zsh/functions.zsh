@@ -27,3 +27,7 @@ dir_mem_preexec () {print -Pn "\e]2; %~/ \a"}
 print_path() { tr ':' '\n' <<< "$PATH" }
 
 allow_binstubs_for_project() { mkdir -p .git/safe }
+
+use_homebrew_java() {
+  export JAVA_HOME="$(/opt/homebrew/bin/brew --prefix $1)/libexec/openjdk.jdk/Contents/Home"
+}

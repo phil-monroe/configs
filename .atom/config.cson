@@ -14,7 +14,6 @@
     displayOnLeftSide: false
   core:
     allowPendingPaneItems: false
-    automaticallyUpdate: false
     disabledPackages: [
       "data-atom"
       "api-blueprint-preview"
@@ -78,6 +77,7 @@
       fixOnSave: true
     disabling: {}
   "linter-rubocop":
+    command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
   "linter-ruby":
     ignoredExtensions: [
@@ -100,7 +100,7 @@
     command: "./bin/rspec -f doc"
   "rubocop-auto-correct":
     correctFile: true
-    rubocopCommandPath: "./bin/rubocop"
+    rubocopCommandPath: "bundle exec rubocop"
   "status-bar": {}
   "todo-show":
     findTheseTodos: [

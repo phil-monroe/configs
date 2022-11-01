@@ -6,9 +6,15 @@ PATH=".git/safe/../../bin"
 # My bins
 PATH="$PATH:$HOME/bin"
 
+# Homebrew
+PATH="/opt/homebrew/bin:$PATH"
+
+# rbenv
+PATH="$PATH:/Users/phil/.rbenv/shims"
+
 # ASDF
-PATH="$PATH:${ASDF_BIN}"
-PATH="$PATH:${ASDF_USER_SHIMS}"
+PATH="$PATH:${$(/opt/homebrew/bin/brew --prefix asdf)}/libexec/bin"
+PATH="$PATH:$HOME/.asdf/shims"
 
 ### Heroku Toolbelt
 PATH="$PATH:/usr/local/heroku/bin"

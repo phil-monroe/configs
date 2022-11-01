@@ -1,7 +1,7 @@
-# echo 'zshrc loaded'
+echo 'zshrc loaded'
 
 export LANG="en_US.UTF-8"
-export EDITOR=atom
+export EDITOR="/usr/local/bin/atom --wait"
 export MAKE_OPTS=-j8
 
 # Ruby
@@ -14,7 +14,7 @@ export NODE_PATH=/usr/local/lib/node_modules
 export GOPATH="$HOME/Development/golang"
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+use_homebrew_java 'java11'
 
 # PostgreSQL
 export PGDATA="./.postgres"
@@ -23,10 +23,14 @@ export PGDATA="./.postgres"
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 
 # Amazon AWS CLI
-source /usr/local/share/zsh/site-functions/_aws
+source /opt/homebrew/share/zsh/site-functions/_aws
 
 # ASDF
-source $(brew --prefix asdf)/asdf.sh
+source $(/opt/homebrew/bin/brew --prefix asdf)/asdf.sh
 
+# rbenv
+eval "$(/opt/homebrew/bin/rbenv init - zsh)"
+
+# Customizations
 source $HOME/.zsh/path.zsh
 source $HOME/.zsh/history.zsh

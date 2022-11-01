@@ -23,8 +23,8 @@ function git_rprompt()
   # This call requires the "findup" script from http://www.davidfaure.fr/scripts
   _git=`findup .git`
 
-  if test -n "$_git";
-    then
+  if test -n "$_git" && test -f $_git/HEAD;
+  then
     _branch=`sed -e 's/ref: refs\/heads\///' $_git/HEAD`
     _sha=`git log --pretty=format:'%h' -n 1`
     RPROMPT="[$_branch|$_sha]"

@@ -1,5 +1,5 @@
 #!/usr/local/bin/zsh
-# echo 'zprofile loaded'
+echo 'zprofile loaded'
 
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/functions.zsh
